@@ -25,8 +25,11 @@ input{
 	margin:10px;
 	text-align: center;
 	
+	
 }
-
+h2{
+	font-size: 35px;
+}
 art {
 	width: 200px;
 }
@@ -43,7 +46,20 @@ art {
 	text-align: center;
 }
 
+img{
+	position: fixed;
+	margin-left: -20px;
+	margin-top: -55px;
+}
 
+#footer{
+	text-align: center;
+	color: white;
+}
+
+strong{
+	font-size: 60px;
+}
 
 
 

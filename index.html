@@ -6,7 +6,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title></title>
+        <title>Give Me Sound</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 		<head>
@@ -38,10 +38,12 @@
     <body ng-controller="MainCtrl">
 		
  
-
+    <img src="hipsterlogogenerator.png" height="165" width="200">
 	
     <div class="container"> 
       <!-- Example row of columns -->
+
+
     <div class="row animated bounceInLeft">
 		<div class="col-md-4 formulario">
           	<h2>What are you into? </h2>
@@ -49,7 +51,7 @@
       
 			
 			<form ng-submit="checkArtists()" class="navbar-form navbar-right" role="form">
-				<div class="col-md-4">
+				<div class="col-md-4 col-md-offset-2">
 					<div class="form-group formulario datos">
 						<input ng-model="artist1" type="text" placeholder="Artist" class="form-control art">
 						<input ng-model="artist2" type="text" placeholder="Artist" class="form-control">
@@ -73,7 +75,7 @@
               <div class="col-md-8">
               <br/>
               
-              <iframe id="spotify-iframe" width="640px" height="580px" frameborder="0" allowtransparency="true"></iframe>
+              <iframe id="spotify-iframe" class="col-md-offset-2"width="640px" height="580px" frameborder="0" allowtransparency="true"></iframe>
 
                   <!-- LOOP OVER THE ARTISTS IN $scope.artists   -->
                   <div ng-repeat="artist in artists">
@@ -90,7 +92,7 @@
 
       <footer>
         <div id="footer">
-           
+           <h2><strong>Give Me Sound</strong></h2>
         </div>
       </footer>
 		<script type="text/javascript" src="http://apis.google.com/js/plusone.js"></script>
