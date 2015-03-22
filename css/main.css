@@ -30,7 +30,10 @@ input{
 art {
 	width: 200px;
 }
+#divplaylist {
+	left: 160px;
 
+}
 
 .formulario{
 	text-align: center;
