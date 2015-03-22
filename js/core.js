@@ -32,7 +32,7 @@ appMusic.controller('MainCtrl', [
                 list += '&name=' + $scope.artist5;
             }
  
-            $http.get('http://developer.echonest.com/api/v4/artist/similar?api_key=YLAOMF7VPOBLKCYUH'+list+'&format=json&results=15')
+            $http.get('http://developer.echonest.com/api/v4/artist/similar?api_key=JOSOPBAMMN94VYZYF '+list+'&format=json&results=15')
             .success(function (data) {
                 $scope.artists = data.response.artists;
                 //console.log(data.response.artists);
@@ -44,11 +44,11 @@ appMusic.controller('MainCtrl', [
         };
  
         $scope.getSong = function (artist){
-            $http.get('http://developer.echonest.com/api/v4/song/search?api_key=YLAOMF7VPOBLKCYUH&artist_id='+artist.id+'&sort=song_hotttnesss-desc&results=1')
+            $http.get('http://developer.echonest.com/api/v4/song/search?api_key=JOSOPBAMMN94VYZYF &artist_id='+artist.id+'&sort=song_hotttnesss-desc&results=1')
             .success (function (data) {
                 artist['hotsong'] = data.response.songs[0].title;
  
-                $http.get('http://developer.echonest.com/api/v4/song/search?api_key=YLAOMF7VPOBLKCYUH&format=json&results=1&artist='+artist.name+'&title='+artist.hotsong+'&bucket=id:spotify&bucket=tracks&limit=true')
+                $http.get('http://developer.echonest.com/api/v4/song/search?api_key=JOSOPBAMMN94VYZYF &format=json&results=1&artist='+artist.name+'&title='+artist.hotsong+'&bucket=id:spotify&bucket=tracks&limit=true')
                 .success (function (data){
                     var spotID = data.response.songs[0].tracks[0].foreign_id.split(":");
                     artist['hotSpotifyId'] = spotID[2];
